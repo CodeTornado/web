@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center {
+            margin: auto;
+            background: lime;
+            width: 66%;
+        }
+        
+        .outside {
+            margin: 3rem 0 0 -3rem;
+            background: cyan;
+            width: 66%;
+        }
+        
+        .new-center {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color:#0000FF;">
+        <div style="width:50%;margin-left:20%;background-color:#00FF00;">Width: 50%, Left margin: 20%</div>
+        <div style="width:30%;margin-left:60%;background-color:#FF0000;">Width: 30%, Left margin: 60%</div>
+    </div>
+    <hr>
+    <div style="font-size:18px;">
+        Full size text (18px)
+        <span style="font-size:50%;">50%</span>
+        <span style="font-size:200%;">200%</span>
+    </div>
+
+    <hr>
+    <div class="center">此元素会被居中。</div>
+
+    <div class="outside">此元素会显示在包含块之外。</div>
+    <hr>
+    <div class="new-center">此元素会被居中。新写法</div>
+    <hr>
+
+</body>
+
+</html>
