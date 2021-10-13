@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Simple setInterval clock</title>
+    <style>
+        p {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <button>开始</button>
+    <button>停止</button>
+    <button>重置</button>
+    <p class="clock"></p>
+
+    <script>
+        document.querySelector('.clock').textContent = '0'
+        let timer
+        let lastTime = 0
+        document.querySelector('button:nth-of-type(1)').addEventListener('click', function(e) {
+            document.querySelector('button:nth-of-type(1)').disabled = true
+            let startTime = new Date()
+            timer = setInterval(function() {
+                let intervalTime = (new Date() - startTime) / 1000
+                document.querySelector('.clock').textContent = Number.parseInt(lastTime + intervalTime)
+            }, 1000)
+        })
+        document.querySelector('button:nth-of-type(2)').addEventListener('click', function() {
+            document.querySelector('button:nth-of-type(1)').disabled = false
+            const timeStr = document.querySelector('.clock').textContent
+            lastTime = timeStr ? Number.parseInt(timeStr) : 0
+            clearInterval(timer)
+        })
+        document.querySelector('button:nth-of-type(3)').addEventListener('click', function() {
+            document.querySelector('button:nth-of-type(1)').disabled = false
+            document.querySelector('.clock').textContent = '0'
+            clearInterval(timer)
+            lastTime = 0;
+        })
+    </script>
+</body>
+
+</html>
