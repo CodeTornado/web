@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section:nth-of-type(1),
+        section:nth-of-type(2),
+        section:nth-of-type(3) {
+            perspective: 400px;
+            display: inline-block;
+            margin: 1em;
+        }
+
+        section:nth-of-type(4),
+        section:nth-of-type(5),
+        section:nth-of-type(6) {
+            perspective: 1000px;
+            display: inline-block;
+            margin: 1em;
+        }
+
+        div {
+            display: inline-block;
+            width: 200px;
+            height: 120px;
+            background: blue;
+            /* transform: rotate(0deg); */
+            text-align: center;
+            color: white;
+            transform: rotateX(45deg);
+        }
+
+        div:nth-of-type(1) {
+            perspective-origin: 75% 50%;
+        }
+
+        div:nth-of-type(2) {
+            perspective-origin: 50% 50%;
+        }
+
+        div:nth-of-type(3) {
+            perspective-origin: 25% 50%;
+        }
+
+        div:nth-of-type(4) {
+            perspective-origin: 75% 50%;
+        }
+
+        div:nth-of-type(5) {
+            perspective-origin: 50% 50%;
+        }
+
+        div:nth-of-type(6) {
+            perspective-origin: 25% 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>123</div>
+    </section>
+    <section>
+        <div>123</div>
+    </section>
+    <section>
+        <div>123</div>
+    </section>
+    <hr>
+    <section>
+        <div>123</div>
+    </section>
+    <section>
+        <div>123</div>
+    </section>
+    <section>
+        <div>123</div>
+    </section>
+
+</body>
+
+</html>
