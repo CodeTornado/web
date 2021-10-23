@@ -1,0 +1,14 @@
+<script>
+    function camelize(str) {
+        let charArr = str.split('')
+        charArr.reduce(function(accmulator, item, index, array) {
+            if (item === '-') {
+                array[index] = null
+                array[index + 1] = array[index + 1].toUpperCase()
+            }
+        })
+        return charArr.join('')
+    }
+
+    console.log(camelize("background-color"))
+</script>

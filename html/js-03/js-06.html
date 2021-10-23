@@ -1,0 +1,40 @@
+<script>
+    function Calculator() {
+        this.calculate = function(str) {
+            if (!str) return
+
+            let arr = str.split(' ')
+            let operator = arr[1]
+            let a = Number(arr[0])
+            let b = Number(arr[2])
+
+            if (arr.length < 3 || !this.methods[operator] || isNaN(a) || isNaN(b)) {
+                alert(`错误的输入: ${str}`)
+                return
+            }
+
+            return this.methods[operator](a, b)
+        }
+        this.methods = {
+            '+': (a, b) => a + b,
+            '-': (a, b) => a - b,
+        }
+        this.addMethod = function(name, func) {
+            this.methods[name] = func
+        }
+
+    }
+
+
+    let calc = new Calculator;
+
+    alert(calc.calculate("3 + 7")); // 10
+
+    let powerCalc = new Calculator;
+    powerCalc.addMethod("*", (a, b) => a * b);
+    powerCalc.addMethod("/", (a, b) => a / b);
+    powerCalc.addMethod("**", (a, b) => a ** b);
+
+    let result = powerCalc.calculate("2 ** 3");
+    alert(result); // 8
+</script>

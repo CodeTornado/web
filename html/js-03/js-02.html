@@ -1,0 +1,12 @@
+<script>
+    function filterRange(arr, a, b) {
+        return arr.filter(item => (item >= a && item <= b))
+    }
+    let arr = [5, 3, 8, 1];
+
+    let filtered = filterRange(arr, 1, 4);
+
+    console.log(filtered.join('')); // 3,1（匹配值）
+
+    console.log(arr.join('')); // 5,3,8,1（未修改）
+</script>
