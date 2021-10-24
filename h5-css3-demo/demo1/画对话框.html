@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/画对话框.css">
+</head>
+
+<body>
+    <button>左聊</button>
+    <button>右聊</button>
+    <div class="demo1">
+        你好呀！demo2
+    </div>
+
+    <div class="demo2">
+        你好呀！demo1
+    </div>
+</body>
+
+</html>
+<script>
+    let leftButton = document.getElementsByTagName('button')[0]
+    let rightButton = document.getElementsByTagName('button')[1]
+    let count = 1
+    leftButton.addEventListener('click', function() {
+        let div = document.createElement('div')
+        div.className = "demo1"
+        div.textContent = count++
+            document.getElementsByTagName('body')[0].appendChild(div)
+    })
+
+    rightButton.addEventListener('click', function() {
+        let div = document.createElement('div')
+        div.className = "demo2"
+        div.textContent = count++
+            document.getElementsByTagName('body')[0].appendChild(div)
+    })
+</script>

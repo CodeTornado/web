@@ -1,0 +1,69 @@
+.star5 {
+    width: 0px;
+    height: 0px;
+    margin: 100px auto;
+    border-bottom: 70px solid red;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    position: relative;
+}
+
+.star5::before {
+    content: '';
+    border-bottom: 80px solid red;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    transform: rotate(-35deg);
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -ms-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+    position: absolute;
+    top: -46px;
+    left: -64px;
+}
+
+.star5::after {
+    content: '';
+    border-bottom: 70px solid red;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    -webkit-transform: rotate(-70deg);
+    -moz-transform: rotate(-70deg);
+    -ms-transform: rotate(-70deg);
+    -o-transform: rotate(-70deg);
+    position: absolute;
+    top: 3px;
+    left: -105px;
+}
+
+.star6 {
+    width: 0px;
+    height: 0px;
+    margin: 100px auto;
+    border-bottom: 120px solid green;
+    border-right: 70px solid transparent;
+    border-left: 70px solid transparent;
+    position: relative;
+}
+
+.star6::before {
+    content: '';
+    border-bottom: 120px solid green;
+    border-right: 70px solid transparent;
+    border-left: 70px solid transparent;
+    transform: rotate(180deg);
+    position: absolute;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    top: 35px;
+    left: -70px;
+}

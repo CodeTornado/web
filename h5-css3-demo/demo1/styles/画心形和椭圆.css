@@ -1,0 +1,65 @@
+.demo1 {
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    position: relative;
+    /* background-color: yellow; */
+}
+
+.demo1::before {
+    content: '';
+    width: 0;
+    height: 25px;
+    position: absolute;
+    background-color: red;
+    border-color: brown;
+    border: 25px solid red;
+    border-radius: 25px 25px 0 0;
+    -webkit-border-radius: 25px 25px 0 0;
+    -moz-border-radius: 25px 25px 0 0;
+    -ms-border-radius: 25px 25px 0 0;
+    -o-border-radius: 25px 25px 0 0;
+    transform-origin: 100% 50%;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    top: -10px;
+    left: 8px;
+}
+
+.demo1::after {
+    content: '';
+    width: 0;
+    height: 25px;
+    position: absolute;
+    background-color: red;
+    border-color: brown;
+    border: 25px solid red;
+    border-radius: 25px 25px 0 0;
+    -webkit-border-radius: 25px 25px 0 0;
+    -moz-border-radius: 25px 25px 0 0;
+    -ms-border-radius: 25px 25px 0 0;
+    -o-border-radius: 25px 25px 0 0;
+    transform-origin: 100% 50%;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    top: 25px;
+    left: 27px;
+}
+
+.demo2 {
+    margin: 100px auto;
+    width: 0;
+    height: 40px;
+    border: 50px solid yellow;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    -webkit-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    -ms-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    -o-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}

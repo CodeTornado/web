@@ -1,0 +1,50 @@
+body {
+    margin: 20px auto;
+    padding: 30px;
+}
+
+.demo1,
+.demo2 {
+    margin: 20px;
+    width: 200px;
+    background-color: aquamarine;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    position: relative;
+    padding: 0.3em;
+    text-align: center;
+}
+
+.demo2 {
+    background-color: antiquewhite;
+    left: 100px;
+}
+
+.demo1::before {
+    content: '';
+    border-left: 0px solid transparent;
+    border-right: 7px solid aquamarine;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    left: -7px;
+    top: 8px;
+    position: absolute;
+}
+
+.demo2::after {
+    content: '';
+    border-left: 7px solid antiquewhite;
+    border-right: 0px solid transparent;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    right: -7px;
+    top: 8px;
+    position: absolute;
+}
+
+button:nth-of-type(2) {
+    float: right;
+}

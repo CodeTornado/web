@@ -1,0 +1,40 @@
+body {
+    padding: 20px;
+}
+
+div {
+    margin: 40px;
+}
+
+.diamond {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    overflow: hidden;
+}
+
+.diamond::before {
+    content: "transform: rotate(45deg);";
+    text-align: center;
+}
+
+.quadrilateral {
+    width: 200px;
+    height: 100px;
+    background-color: aqua;
+    transform: skew(20deg, 0deg);
+    -webkit-transform: skew(20deg, 0deg);
+    -moz-transform: skew(20deg, 0deg);
+    -ms-transform: skew(20deg, 0deg);
+    -o-transform: skew(20deg, 0deg);
+}
+
+.quadrilateral::before {
+    content: "transform: skew(20deg, 0deg);";
+    text-align: center;
+}

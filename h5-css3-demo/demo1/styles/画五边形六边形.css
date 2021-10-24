@@ -1,0 +1,45 @@
+.demo1 {
+    margin: 100px auto;
+    width: 54px;
+    height: 0;
+    border-top: 50px solid red;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    position: relative;
+}
+
+.demo1::before {
+    content: '';
+    border-bottom: 35px solid red;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    position: absolute;
+    top: -85px;
+    left: -18px;
+}
+
+.demo2 {
+    margin: 100px auto;
+    width: 100px;
+    height: 50px;
+    position: relative;
+    background-color: blue;
+}
+
+.demo2::before {
+    content: '';
+    border-bottom: 35px solid blue;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    position: absolute;
+    top: -35px;
+}
+
+.demo2::after {
+    content: '';
+    border-top: 35px solid blue;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    position: absolute;
+    bottom: -35px;
+}

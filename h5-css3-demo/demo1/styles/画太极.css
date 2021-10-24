@@ -1,0 +1,65 @@
+body {
+    background-color: #ccc;
+}
+
+.demo1 {
+    transition: all 1s;
+    margin: 100px auto;
+    background-color: white;
+    width: 150px;
+    height: 300px;
+    border-radius: 50%;
+    -webkit-border-radius: 50% solid black;
+    -moz-border-radius: 50% solid black;
+    -ms-border-radius: 50% solid black;
+    -o-border-radius: 50% solid black;
+    border-left: 150px solid black;
+    position: relative;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.demo1::before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    padding: 30px;
+    background-color: black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 45px solid white;
+    position: absolute;
+    top: 0;
+    left: -75px;
+}
+
+.demo1::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 45px solid black;
+    position: absolute;
+    bottom: 0;
+    left: -75px;
+}
+
+.demo1:hover {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    box-shadow: 0 0 60px black;
+}
